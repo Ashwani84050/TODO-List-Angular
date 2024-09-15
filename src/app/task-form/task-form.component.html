@@ -1,0 +1,23 @@
+<div class="todo-form-container">
+    <h3>Create a New Task</h3>
+    <form (ngSubmit)="addTask()" #taskForm="ngForm">
+      <div class="form-group">
+        <label for="title">Task Title:</label>
+        <input 
+          type="text" 
+          id="title" 
+          [(ngModel)]="title" 
+          name="title" 
+          required 
+          placeholder="Enter task title" 
+          class="form-control"
+          #taskTitle="ngModel">
+        <div *ngIf="taskTitle.invalid && taskTitle.touched" class="error-message">
+          Task title is required.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="taskForm.invalid">Add Task</button>
+    </form>
+  </div>
+  

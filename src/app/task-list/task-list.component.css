@@ -1,0 +1,16 @@
+.todo-list-container {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: grey;
+  }
+  
